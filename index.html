@@ -38,14 +38,25 @@
             <!-- <li><a href="#skills">Skills</a></li> -->
             <li><a href="#education">Education</a></li>
         </ul>
+        <div class="sidebar-footer">
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <span>Dark Mode</span>
+            </div>
+        </div>
     </nav>
 
     <div id="main-content" class="main-content">
         <!-- [추가] PDF/출력/공유 버튼 -->
         <div class="action-buttons">
-            <button id="share-btn" class="action-btn" title="공유하기"><i class="fas fa-share-alt"></i></button>
-            <button id="print-btn" class="action-btn" title="출력하기"><i class="fas fa-print"></i></button>
-            <button id="pdf-btn" class="action-btn" title="PDF로 저장"><i class="fas fa-file-pdf"></i></button>
+            <div class="button-group">
+                <button id="share-btn" class="action-btn" title="공유하기"><i class="fas fa-share-alt"></i></button>
+                <button id="print-btn" class="action-btn" title="출력하기"><i class="fas fa-print"></i></button>
+                <button id="pdf-btn" class="action-btn" title="PDF로 저장"><i class="fas fa-file-pdf"></i></button>
+            </div>
         </div>
 
         <div class="container">
