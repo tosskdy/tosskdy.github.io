@@ -1,5 +1,26 @@
-// version: 2.2
+// version: 2.3
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Theme Switcher Logic ---
+    const themeSwitch = document.getElementById('checkbox');
+    const currentTheme = localStorage.getItem('theme');
+
+    function setTheme(theme) {
+        document.body.classList.toggle('dark-mode', theme === 'dark');
+        themeSwitch.checked = theme === 'dark';
+        localStorage.setItem('theme', theme);
+    }
+
+    if (currentTheme) {
+        setTheme(currentTheme);
+    } else {
+        // Default to light mode
+        setTheme('light');
+    }
+
+    themeSwitch.addEventListener('change', function(event) {
+        setTheme(event.target.checked ? 'dark' : 'light');
+    });
+
     // --- Modal Image Preloading ---
     const allModalButtons = document.querySelectorAll('.open-modal-btn');
     allModalButtons.forEach(btn => {
@@ -299,6 +320,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-
